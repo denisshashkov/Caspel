@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Col, Row } from 'antd';
+import { TableComponent } from './components/Table/TableComponent';
+import { HeaderComponent } from './components/Header/HeaderComponent';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <HeaderComponent />
 
-export default App;
+      <Row>
+        <Col xs={24} md={{ span: 12, offset: 6 }}>
+          <TableComponent />
+        </Col>
+      </Row>
+    </>
+  );
+};
